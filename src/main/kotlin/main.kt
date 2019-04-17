@@ -25,8 +25,10 @@ import kotlinx.coroutines.*
 import kotlinx.coroutines.javafx.JavaFx
 import me.eater.emo.*
 import me.eater.emo.emo.Settings
+import java.awt.Desktop
 import java.io.IOException
 import java.net.Proxy
+import java.net.URI
 import java.net.URL
 import java.nio.file.Files
 import java.nio.file.Path
@@ -401,6 +403,14 @@ class MainController : Initializable {
 
     fun onAddAccountClick() {
         WindowStore.loginModal.show()
+    }
+
+    fun onDonationLinkAction() {
+        try {
+            Desktop.getDesktop().browse(URI("https://www.patreon.com/LexManos"));
+        } catch (e: Exception) {
+            e.printStackTrace();
+        }
     }
 }
 

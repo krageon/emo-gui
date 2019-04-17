@@ -65,6 +65,6 @@
                 </Tab>
             </tabs>
         </TabPane>
-        <Hyperlink layoutX="513.0" layoutY="16.0" text="Support Forge on Patreon.com" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="16.0" />
+        <Hyperlink layoutX="513.0" layoutY="16.0" onAction="#onDonationLinkAction" text="Support Forge on Patreon.com" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="16.0" />
     </children>
 </AnchorPane>

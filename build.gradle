@@ -41,7 +41,7 @@ dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-javafx:1.2.0'
     implementation 'com.github.kittinunf.fuel:fuel:2.0.1'
     implementation 'com.github.kittinunf.fuel:fuel-coroutines:2.0.1'
-    implementation files("[blaat]/emo-1.0-SNAPSHOT.jar")
+    implementation files("../emo/build/libs/emo-1.0-SNAPSHOT.jar", "../emo-kt/build/libs/emo-1.0-SNAPSHOT.jar")
     implementation 'com.uchuhimo:konf:0.13.2'
     implementation 'net.swiftzer.semver:semver:1.0.0'
     implementation 'com.mojang:authlib:1.5.22'
@@ -62,7 +62,7 @@ jar {
     manifest {
         attributes(
                 'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
-                'Main-Class': "me.eater.emo.gui.MainKt"
+                'Main-Class': "me.eater.emo.gui.Main"
         )
     }
 }
